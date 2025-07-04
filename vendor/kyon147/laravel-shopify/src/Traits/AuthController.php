@@ -46,8 +46,7 @@ trait AuthController
 
         // Run the action
         [$result, $status] = $authShop($request);
-        dd($result);
-        die;
+     
         if ($status === null) {
             // Show exception, something is wrong
             throw new SignatureVerificationException('Invalid HMAC verification');
